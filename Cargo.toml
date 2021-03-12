@@ -1,0 +1,30 @@
+[package]
+name = "cleanblog"
+version = "0.1.0"
+authors = ["tymu <python21@aol.jp>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4.7"
+tera = "1.7.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_derive = "1"
+serde_json = "1"
+tokio = { version = "1.2.0", features = ["full"] }
+futures = "0.3.13"
+rust-argon2 = "0.8"
+url = "2.2.1"
+chrono = "0.4.19"
+substring = "1.4.5"
+
+[dependencies.rocket_contrib]
+version = "0.4.7"
+default-features = false
+features = ["tera_templates", "serve", "json"]
+
+[dependencies.mongodb]
+version = "1.1.1"
+default-features = false
+features = ["sync"]
